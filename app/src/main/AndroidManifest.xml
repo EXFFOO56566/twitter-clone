@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.scappy.twlight">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name="com.scappy.twlight.LiveBroadcastSystem.AgoraApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.GetCommentRetweetedByActivityPage"/>
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.GetCommentLikedByActivity"/>
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ContentStoryChatViewSystemActivityPage"/>
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.AboutUsActivityPage" />
+        <activity
+            android:name="com.scappy.twlight.LiveBroadcastSystem.activities.GetLiveBroadcastContentActivityPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.Policy"/>
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.Terms"/>
+        <activity android:name="com.scappy.twlight.LiveBroadcastSystem.activities.GetAudienceContentActivityPage" />
+        <activity android:name="com.scappy.twlight.LiveBroadcastSystem.activities.GoAudienceActivityPage" />
+        <activity android:name="com.scappy.twlight.LiveBroadcastSystem.activities.GoLiveBroadcastActivityPage" />
+        <activity android:name="com.scappy.twlight.LiveBroadcastSystem.activities.BroadcasterActivity" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.GetViewedActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.AddContantActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.StoryViewSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.MangePendingVerificationActivity" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.VerificationSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActiveBanSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.GetContentPostListActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.GetPostReportListConentActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.GetUserReportListContentActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.GetUserListContentActivityPage" />
+        <activity android:name="com.scappy.twlight.AdminSystem.AdminSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.MediaSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.EditPostSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.EditPasswordSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.EditEmailSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.SavedPostContentActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.GetRetweetedByContentActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ContentFollowersActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ContentFollowingActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.GetLikedByActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.SettingsSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.SearchPostSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ChatActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.CreateChatContentActivity" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.CommentSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ContentUserProfileActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.EditProfileSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.EmailAuthentication.ForgotPasswordSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.GetCheckContentSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.CreatePostContentActivity" />
+        <activity android:name="com.scappy.twlight.ActivitiesSystems.ViewMyProfileContentActivityPage" />
+        <activity android:name="com.scappy.twlight.PhoneAuthenticationSystem.PhoneSignUpActivity" />
+        <activity android:name="com.scappy.twlight.PhoneAuthenticationSystem.VerifyOTPActivity" />
+        <activity android:name="com.scappy.twlight.PhoneAuthenticationSystem.OTPActivity" />
+        <activity android:name="com.scappy.twlight.EmailAuthentication.SignUpContentSystemActivityPage" />
+        <activity android:name="com.scappy.twlight.EmailAuthentication.GetPasswordContentActivityPage" />
+        <activity android:name="com.scappy.twlight.EmailAuthentication.GetEmailContentActivityPage" />
+        <activity android:name="com.scappy.twlight.WelcomeUsersSystem.GetWelcomeContentActivityPage" />
+        <activity android:name="com.scappy.twlight.WelcomeUsersSystem.StartSplashScreenContentActivityPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.scappy.twlight.MainActivity" />
+
+        <service
+            android:name="com.scappy.twlight.NotificationSystem.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8957916229862289~8996479428"/>
+    </application>
+
+</manifest>

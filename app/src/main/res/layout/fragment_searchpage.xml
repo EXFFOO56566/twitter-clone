@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF0F3F4"
+    tools:context=".AppFragments.MainSearchFragmentUiSystem">
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="0dp"
+     android:id="@+id/head"
+     android:elevation="5dp"
+     android:background="#fff"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:layout_height="wrap_content">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/constraintLayout"
+         android:layout_width="0dp"
+         android:layout_height="50dp"
+         android:background="#fff"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <LinearLayout
+
+             android:layout_width="0dp"
+             android:layout_height="0dp"
+             android:layout_marginStart="16dp"
+             android:layout_marginLeft="16dp"
+             android:layout_marginTop="8dp"
+             android:layout_marginEnd="16dp"
+             android:layout_marginRight="16dp"
+             android:layout_marginBottom="8dp"
+             android:background="@drawable/post_btn_round"
+             android:backgroundTint="#FDF0F3F4"
+             android:orientation="horizontal"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginStart="10dp"
+                 android:src="@drawable/ic_search"
+                 app:tint="#657786"
+                 android:contentDescription="TODO"
+                 tools:ignore="ContentDescription,HardcodedText" />
+
+             <com.hendraanggrian.appcompat.widget.SocialEditText
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginEnd="14dp"
+                 android:background="@null"
+                                 android:id="@+id/editText"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                 android:fontFamily="serif"
+                 android:hint="Search..."
+                 android:paddingStart="15dp"
+                 android:textColor="#35383B"
+                 android:textColorHint="#657786"
+                 app:hashtagColor="@color/colorPrimary"
+                 app:mentionColor="@color/colorPrimary"
+                 app:socialFlags="hashtag|mention"
+                 tools:ignore="HardcodedText,RtlSymmetry" />
+
+         </LinearLayout>
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+     <LinearLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:orientation="horizontal"
+         android:id="@+id/tabs"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         android:background="#fff"
+         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+         android:baselineAligned="false">
+
+         <RelativeLayout
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:id="@+id/trendLy"
+             android:text="Users"
+             android:textAllCaps="false"
+             android:fontFamily="serif"
+             style="?android:attr/buttonBarButtonStyle"
+             android:layout_height="wrap_content"
+             tools:ignore="HardcodedText">
+
+             <TextView
+                 android:layout_centerInParent="true"
+                 android:layout_width="wrap_content"
+                 android:id="@+id/users"
+                 android:text="Posts"
+                 android:textSize="16dp"
+                 android:textAllCaps="false"
+                 tools:ignore="HardcodedText,SpUsage"
+                 android:fontFamily="serif"
+                 android:textColor="#657786"
+                 android:layout_height="wrap_content" />
+         </RelativeLayout>
+         <RelativeLayout
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:textAllCaps="false"
+             android:fontFamily="serif"
+             android:id="@+id/usersLy"
+             android:textColor="#657786"
+             android:text="Groups"
+             style="?android:attr/buttonBarButtonStyle"
+             android:layout_height="wrap_content"
+             tools:ignore="HardcodedText">
+
+             <TextView
+                 android:layout_centerInParent="true"
+                 android:layout_width="wrap_content"
+                 android:textAllCaps="false"
+                 android:fontFamily="serif"
+                 android:id="@+id/groups"
+                 android:textColor="#657786"
+                 android:text="Users"
+                 android:textSize="16dp"
+                 tools:ignore="HardcodedText,SpUsage"
+                 android:layout_height="wrap_content" />
+         </RelativeLayout>
+     </LinearLayout>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/trendingRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/usersRv"
+                    tools:listitem="@layout/userview_ui"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:alpha="0.5"
+        android:text="Nothing found"
+        android:visibility="gone"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

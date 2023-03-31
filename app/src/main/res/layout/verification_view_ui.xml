@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="8dp"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout">
+
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:text="Name"
+                android:textColor="#35383B"
+                android:textSize="19sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:text="Username"
+            android:textColor="#657786"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:text="Who are you ?"
+            android:textColor="#35383B"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textColor="#35383B"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:id="@+id/type"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:text="Paste link of photo of your ID"
+            android:textColor="#35383B"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textColor="#35383B"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:id="@+id/id"
+            android:linksClickable="true"
+            android:textColorLink="@color/colorPrimary"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:text="Paste any 2 reference link"
+            android:textColor="#35383B"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textColor="#35383B"
+            android:textSize="15sp"
+            android:id="@+id/rOne"
+            android:linksClickable="true"
+            android:textColorLink="@color/colorPrimary"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="#35383B"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/rTwo"
+            android:linksClickable="true"
+            android:textColorLink="@color/colorPrimary"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#fff"
+            android:fontFamily="serif"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="Verify"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/post_btn_round"
+            android:backgroundTint="@color/colorPrimary"
+            android:stateListAnimator="@null"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/reject"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#fff"
+            android:fontFamily="serif"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="Reject"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/post_btn_round"
+            android:backgroundTint="#657786"
+            android:stateListAnimator="@null"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

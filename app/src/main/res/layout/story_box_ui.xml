@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginStart="14dp"
+    android:layout_height="wrap_content">
+
+    <com.joooonho.SelectableRoundedImageView
+        app:sriv_left_top_corner_radius="12dip"
+        app:sriv_right_top_corner_radius="12dip"
+        app:sriv_left_bottom_corner_radius="12dip"
+        app:sriv_right_bottom_corner_radius="12dip"
+        app:sriv_oval="false"
+        android:layout_width="65dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/story_photo" />
+
+    <com.joooonho.SelectableRoundedImageView
+        app:sriv_left_top_corner_radius="12dip"
+        app:sriv_right_top_corner_radius="12dip"
+        app:sriv_left_bottom_corner_radius="12dip"
+        app:sriv_right_bottom_corner_radius="12dip"
+        app:sriv_oval="false"
+        android:layout_width="65dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/story_photo_seen" />
+
+    <TextView
+        android:id="@+id/story_username"
+        android:maxLines="1"
+        tools:ignore="HardcodedText,SpUsage"
+        android:textSize="15dp"
+        android:textColor="#35383B"
+        android:fontFamily="serif"
+        android:text="Username"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

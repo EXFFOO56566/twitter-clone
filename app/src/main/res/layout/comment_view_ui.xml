@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+
+    android:background="#fff"
+    android:layout_marginTop="2dp"
+    android:paddingBottom="12dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/line_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profile_photo"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/profile_photo"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/more"
+        android:src="@drawable/ic_more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#657786"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_photo"
+        app:layout_constraintEnd_toStartOf="@+id/more"
+        app:layout_constraintStart_toEndOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Name"
+                android:textColor="#35383B"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/verified"
+                android:visibility="gone"
+                android:src="@drawable/ic_verify"
+                android:layout_gravity="center_vertical"
+                android:layout_width="14dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="14dp"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:text="\@Username"
+                android:textColor="#657786"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_reTweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="serif"
+            android:textColor="#AAB8C2"
+
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <com.tylersuehr.socialtextview.SocialTextView
+            android:id="@+id/tv_tweet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="serif"
+            android:text=""
+            app:hashtagColor="#1DA1F2"
+            app:mentionColor="#1DA1F2"
+            app:urlColor="#1DA1F2"
+            app:phoneColor="#1DA1F2"
+            app:emailColor="#1DA1F2"
+            app:linkModes="hashtag|mention|phone|email|url" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/media_layout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        android:background="@drawable/post_btn_round"
+        android:backgroundTint="#2835383B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_photo"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <com.joooonho.SelectableRoundedImageView
+            app:sriv_left_top_corner_radius="10dip"
+            app:sriv_right_top_corner_radius="10dip"
+            app:sriv_left_bottom_corner_radius="10dip"
+            app:sriv_right_bottom_corner_radius="10dip"
+            app:sriv_oval="false"
+            android:id="@+id/media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="24dp"
+            android:src="@drawable/ic_play"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/media_layout"
+        app:layout_constraintStart_toEndOf="@+id/profile_photo"
+        app:layout_constraintTop_toBottomOf="@+id/media_layout">
+
+        <LinearLayout
+
+            android:id="@+id/likeLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_like"
+                    android:tint="#35383B"
+                    tools:ignore="ContentDescription,HardcodedText,UseAppTint"
+                    android:contentDescription="TODO" />
+
+                <ImageView
+                    android:id="@+id/liked"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_liked"
+                    android:visibility="gone"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription,HardcodedText" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/likeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:tint="#35383B"
+                tools:ignore="UseAppTint"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/reTweetLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_toEndOf="@id/likeLy"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/reTweet"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_retweet"
+                    android:tint="#35383B"
+                    tools:ignore="ContentDescription,HardcodedText,UseAppTint"
+                    android:contentDescription="TODO" />
+
+                <ImageView
+                    android:id="@+id/reTweeted"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_retweeted"
+                    android:visibility="gone"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription,HardcodedText" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/reTweetTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:fontFamily="serif"
+                android:tint="#35383B"
+                tools:ignore="UseAppTint"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/commentLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/reTweetLy"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+
+            android:id="@+id/tweet_action_editLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_toEndOf="@id/commentLy"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/tweet_action_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_share"
+                    android:tint="#35383B"
+                    tools:ignore="ContentDescription,HardcodedText,UseAppTint"
+                    android:contentDescription="TODO" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:fontFamily="serif"
+                android:tint="#35383B"
+                tools:ignore="UseAppTint"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

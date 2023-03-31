@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".ActivitiesSystems.StoryViewSystemActivityPage"
+    tools:ignore="Overdraw">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="35dp"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_height="35dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+
+    <ImageView
+        android:id="@+id/play"
+        android:visibility="gone"
+        android:src="@drawable/ic_play"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reverse" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/skip" />
+    </LinearLayout>
+
+    <jp.shts.android.storiesprogressview.StoriesProgressView
+        android:layout_width="match_parent"
+        android:id="@+id/stories"
+        android:gravity="top"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_height="7dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/stories">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/pic"
+            android:text="Username"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/verify"
+            android:src="@drawable/ic_verify"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="16dp"
+            android:layout_toEndOf="@+id/username"
+            android:layout_height="16dp"
+            app:tint="#fff"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/r_seen"
+        android:layout_margin="10dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_eye"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:layout_marginStart="8dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:id="@+id/seen_number"
+            android:textColor="#fff"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_trash"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="14dp"
+        android:id="@+id/story_delete"
+        app:tint="#fff"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@+id/message"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/story_btn_border_round"
+            android:id="@+id/sendMessage"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Send a message"
+            android:textColor="#fff"
+            android:textColorHint="#AEFFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            tools:ignore="HardcodedText,TextFields"
+            android:importantForAutofill="no" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:padding="9dp"
+            android:src="@drawable/ic_sender"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText"
+            app:tint="#fff" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

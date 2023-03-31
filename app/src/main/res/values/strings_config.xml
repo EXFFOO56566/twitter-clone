@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- PLEASE KEEP THIS App ID IN SAFE PLACE -->
+    <!-- Get your own App ID at https://dashboard.agora.io/ -->
+    <string name="private_app_id" translatable="false">b752d73bfe3141449a144485dad1a8bb</string>
+    <string name="agora_access_token" translatable="false" >006b752d73bfe3141449a144485dad1a8bbIAAN/bvcqLH3q8tZUp/lYt68uVa0OqXUklWxnI30CENdpkmE6fEAAAAAEACf/BrpAYN0YgEAAQAAg3Ri</string>
+</resources>

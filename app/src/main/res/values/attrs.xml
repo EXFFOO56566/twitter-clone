@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="backgroundcolor" format="color"/>
+        <attr name="layoutcolor" format="color"/>
+        <attr name="textcolor" format="color"/>
+        <attr name="texttwocolor" format="color"/>
+        <attr name="selectedcolor" format="color" />
+        <attr name="defaultcolor" format="color" />
+        <attr name="menucolor" format="color" />
+        <attr name="shimmer" format="color" />
+        <attr name="color1_background" format="color" />
+        <attr name="color2_background" format="color" />
+        <attr name="color3_background" format="color" />
+        <attr name="color4_background" format="color" />
+        <attr name="color5_background" format="color" />
+        <attr name="color6_background" format="color" />
+        <attr name="color7_background" format="color" />
+        <attr name="color8_background" format="color" />
+        <attr name="color9_background" format="color" />
+        <attr name="color10_background" format="color" />
+        <attr name="color11_background" format="color" />
+    </declare-styleable>
+</resources>

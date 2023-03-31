@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView5"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.tylersuehr.socialtextview.SocialTextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/left_msg"
+            android:fontFamily="serif"
+            app:emailColor="#1DA1F2"
+            app:hashtagColor="#1DA1F2"
+            app:linkModes="email|hashtag|mention|phone|url"
+            app:mentionColor="#1DA1F2"
+            app:phoneColor="#1DA1F2"
+            app:urlColor="#1DA1F2"
+            android:padding="13dp"
+            android:text="Hello"
+            android:textColor="#35383B"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView5"
+            app:layout_constraintTop_toBottomOf="@+id/media"
+            tools:ignore="HardcodedText" />
+
+        <com.joooonho.SelectableRoundedImageView
+            app:sriv_left_top_corner_radius="10dip"
+            app:sriv_right_top_corner_radius="10dip"
+            app:sriv_left_bottom_corner_radius="10dip"
+            app:sriv_right_bottom_corner_radius="10dip"
+            app:sriv_oval="false"
+            android:id="@+id/media"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_play"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/media"
+            app:layout_constraintEnd_toEndOf="@+id/media"
+            app:layout_constraintStart_toStartOf="@+id/media"
+            app:layout_constraintTop_toTopOf="@+id/media"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/seen"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/main"
+        android:visibility="gone"
+        android:fontFamily="serif"
+        android:textColor="#657786"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

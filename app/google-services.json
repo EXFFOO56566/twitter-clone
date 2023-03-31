@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "905806987194",
+    "firebase_url": "https://twlight-6297e-default-rtdb.firebaseio.com",
+    "project_id": "twlight-6297e",
+    "storage_bucket": "twlight-6297e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905806987194:android:01abc75fabcff9a3c0e783",
+        "android_client_info": {
+          "package_name": "com.scappy.twlight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905806987194-ce204h9pkbg9ie7pgo6u2phbgbhnai98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scappy.twlight",
+            "certificate_hash": "920478547644e7f9883f5954d2b5cd27c6cf4c19"
+          }
+        },
+        {
+          "client_id": "905806987194-fqddgp0qkb59ulkeho7i35fciotijbjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEJSc-TqRieaAxcxPHXlJPyVMyOAGCFUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905806987194-fqddgp0qkb59ulkeho7i35fciotijbjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

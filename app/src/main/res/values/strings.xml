@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">TwLight</string>
+    <string name="company_name">©Scappy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" tools:keep="@string/hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Privacy -->
+    <string-array name="privacy">
+        <item>Everyone</item>
+        <item>Followers</item>
+        <item>No one</item>
+    </string-array>
+<!-- Texts  -->
+    <string name="banned_account_msg">We want to inform you that your account has been permanently banned, due to activities in violation of our policy in your account.</string>
+    <string name="about">TwLight is an microblogging and social networking service on which users post and interact with messages known as "tweets". Registered users can post, like and retweet tweets, but unregistered users can only read them. Users access twlight through its mobile-device application software ("app"). twlight were originally restricted to unlimited characters. twlight was created by Scappy, in February 2021. twlight is a some-to-many microblogging service, given that the vast majority of tweets are written by a small minority of users.</string>
+
+    <string-array name="string_array_resolutions">
+        <item>320x240</item>
+        <item>480x360</item>
+        <item>640x360</item>
+        <item>640x480</item>
+        <item>960x540</item>
+        <item>1280x720</item>
+    </string-array>
+
+    <string name="native_ad_unit_id">ca-app-pub-9169984784778354/3652227362</string>  <!-- Paste Native Ad unit id here for admob -->
+    <string name="banner_ad_unit_id">ca-app-pub-9169984784778354/8166187440</string>  <!-- Paste Banner Ad unit id here for admob -->
+</resources>

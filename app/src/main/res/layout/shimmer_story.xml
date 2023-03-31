@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.supercharge.shimmerlayout.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shimmer_Story_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/roundedImageView"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shimmer_story"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/roundedImageView3"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shimmer_story"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/roundedImageView4"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shimmer_story"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/roundedImageView2"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shimmer_story"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover" />
+
+    </LinearLayout>
+
+</io.supercharge.shimmerlayout.ShimmerLayout>

@@ -1,0 +1,229 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#000"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+    tools:ignore="Overdraw">
+
+    <com.scappy.twlight.LiveBroadcastSystem.ui.VideoGridContainer
+        android:id="@+id/live_video_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.scappy.twlight.LiveBroadcastSystem.ui.VideoGridContainer>
+
+    <LinearLayout
+
+        android:id="@+id/live_room_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:src="@drawable/avatar"
+            android:id="@+id/mDp"
+            android:layout_marginStart="14dp"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:text="Username"
+            android:id="@+id/username"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:layout_marginStart="8dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:id="@+id/verify"
+            android:src="@drawable/ic_verify"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="14dp"
+            android:visibility="gone"
+            android:layout_height="14dp"
+            app:tint="#fff"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/live_room_top_layout"
+        android:layout_height="35dp">
+
+        <TextView
+            android:text="Live"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="serif"
+            android:background="@drawable/live_gradient"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="0"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:id="@+id/number"
+            android:drawablePadding="4dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="serif"
+            android:backgroundTint="#3BFFFFFF"
+            android:background="@drawable/live_gradient"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:drawableStart="@drawable/ic_live_eye"
+            android:paddingEnd="4dp"
+            android:paddingStart="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="14dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_x"
+            app:tint="#fff"
+            android:padding="5dp"
+            android:onClick="onLeaveClicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <ImageView
+            android:src="@drawable/btn_beauty"
+            app:tint="#fff"
+            android:padding="5dp"
+            android:id="@+id/live_btn_beautification"
+            android:layout_marginTop="10dp"
+            android:layout_width="35dp"
+            android:onClick="onBeautyClicked"
+            android:layout_height="35dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <ImageView
+            android:src="@drawable/ic_toggle"
+            android:layout_marginTop="10dp"
+            app:tint="#fff"
+            android:padding="5dp"
+            android:onClick="onSwitchCameraClicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <ImageView
+            android:src="@drawable/btn_mute_audio"
+            android:layout_marginTop="10dp"
+            app:tint="#fff"
+            android:padding="5dp"
+            android:layout_width="35dp"
+            android:id="@+id/live_btn_mute_audio"
+            android:onClick="onMuteAudioClicked"
+            android:layout_height="35dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <ImageView
+            android:src="@drawable/btn_mute_video"
+            android:layout_marginTop="10dp"
+            android:onClick="onMuteVideoClicked"
+            app:tint="#fff"
+            android:id="@+id/live_btn_mute_video"
+            android:padding="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:fadingEdge="horizontal"
+        android:id="@+id/chat_rv"
+        android:fadingEdgeLength="35dp"
+        android:fillViewport="false"
+        android:layout_above="@+id/message"
+        android:layout_marginBottom="8dp"
+        android:requiresFadingEdge="vertical"
+        android:layout_height="180dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@+id/message"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/story_btn_border_round"
+            android:id="@+id/sendMessage"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Send a message"
+            android:textColor="#fff"
+            android:paddingStart="16dp"
+            android:textColorHint="#AEFFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,RtlSymmetry,TextFields"
+            android:importantForAutofill="no" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:padding="9dp"
+            android:src="@drawable/ic_sender"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText"
+            app:tint="#fff" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
